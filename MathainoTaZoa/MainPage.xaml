@@ -40,15 +40,14 @@
             <Grid>
                 <!-- WebView for GIF -->
                 <WebView x:Name="AnimalGifWeb"
-                 HeightRequest="500"
+                 HeightRequest="400"
                  WidthRequest="500"
                  IsVisible="False"/>
 
                 <!-- Static Image -->
                 <Image x:Name="AnimalImage"
-               WidthRequest="500"
-               HeightRequest="500"
-               Aspect="AspectFit">
+               WidthRequest="400"
+               HeightRequest="500">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnAnimalTapped"/>
                     </Image.GestureRecognizers>

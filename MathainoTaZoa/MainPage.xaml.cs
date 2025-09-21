@@ -58,10 +58,12 @@ namespace MathainoTaZoa {
             var animal = animals[currentIndex];
             AnimalImage.Source = animal.Image;
             AnimalLabel.Text = animal.Name;
+            AnimalImage.HorizontalOptions = LayoutOptions.Center;
+            AnimalImage.VerticalOptions = LayoutOptions.Center;
         }
         private async void OnAnimalTapped(object sender, EventArgs e) {
             var animal = animals[currentIndex];
-
+            AnimalImage.IsEnabled = false;
             // Σταματάει προηγούμενο ήχο αν παίζει
             StopCurrentAudio();
 
@@ -100,12 +102,13 @@ namespace MathainoTaZoa {
             // Επαναφορά εικόνας
             AnimalGifWeb.IsVisible = false;
             AnimalImage.IsVisible = true;
+            AnimalImage.IsEnabled = true; 
         }
         private void OnNextClicked(object sender, EventArgs e) {
             // Επαναφορά εικόνας
             AnimalGifWeb.IsVisible = false;
             AnimalImage.IsVisible = true;
-
+            AnimalGifWeb.Source = null; 
             PrevBtn.IsEnabled = true;
             NextBtn.IsEnabled = true;
             StopCurrentAudio(); // Σταματάει τον ήχο πριν αλλάξει ζώο
@@ -117,7 +120,7 @@ namespace MathainoTaZoa {
             // Επαναφορά εικόνας
             AnimalGifWeb.IsVisible = false;
             AnimalImage.IsVisible = true;
-
+            AnimalGifWeb.Source = null;
             PrevBtn.IsEnabled = true;
             NextBtn.IsEnabled = true;
             StopCurrentAudio(); // Σταματάει τον ήχο πριν αλλάξει ζώο
