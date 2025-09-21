@@ -105,6 +105,7 @@ namespace MathainoTaZoa {
             AnimalImage.IsEnabled = true; 
         }
         private void OnNextClicked(object sender, EventArgs e) {
+            AnimalImage.IsEnabled = true;
             // Επαναφορά εικόνας
             AnimalGifWeb.IsVisible = false;
             AnimalImage.IsVisible = true;
@@ -117,6 +118,7 @@ namespace MathainoTaZoa {
             ShowAnimal();
         }
         private void OnPrevClicked(object sender, EventArgs e) {
+            AnimalImage.IsEnabled = true;
             // Επαναφορά εικόνας
             AnimalGifWeb.IsVisible = false;
             AnimalImage.IsVisible = true;
